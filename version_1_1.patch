@@ -1,0 +1,21 @@
+Index: server/src/main/java/com/server/server/ServerApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- server/src/main/java/com/server/server/ServerApplication.java	(revision )
++++ server/src/main/java/com/server/server/ServerApplication.java	(revision )
+@@ -0,0 +1,13 @@
++package com.server.server;
++
++import org.springframework.boot.SpringApplication;
++import org.springframework.boot.autoconfigure.SpringBootApplication;
++
++@SpringBootApplication
++public class ServerApplication {
++
++	public static void main(String[] args) {
++		SpringApplication.run(ServerApplication.class, args);
++	}
++
++}
