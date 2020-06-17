@@ -1,9 +1,11 @@
 package com.employee;
 
 
+import com.lab13.Visitor;
 import com.work.Work;
 
 public interface Employee {
+    void accept(Visitor v);
     void remove(Employee e);
     void add(Employee e);
     Manager upgrade(Worker w);

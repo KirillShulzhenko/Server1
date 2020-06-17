@@ -1,5 +1,6 @@
 package com.employee;
 
+import com.lab13.Visitor;
 import com.patterns.workCollection;
 import com.work.Work;
 
@@ -15,7 +16,10 @@ public class Manager implements Employee {
         }
 
     }
-
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
     @Override
     public void add(Employee e) {
         if(delegate!=null)

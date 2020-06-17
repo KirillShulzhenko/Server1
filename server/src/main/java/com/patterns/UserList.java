@@ -4,11 +4,16 @@ import com.employee.Employee;
 import com.employee.Manager;
 import com.employee.Message;
 import com.employee.Worker;
+import com.lab13.Visitor;
 import com.work.Work;
 
 import java.util.LinkedList;
 
 public class UserList implements com.employee.Employee {
+    @Override
+    public void accept(Visitor v) {
+
+    }
     LinkedList<com.employee.Employee> list = new LinkedList<>();
     int temp =0;
     void reverse()
@@ -22,6 +27,12 @@ public class UserList implements com.employee.Employee {
     Employee next()
     {
         return list.get(temp++);
+    }
+    void foreach(Visitor v)
+    {
+        for (Employee employee : list) {
+            employee.accept(v);
+        }
     }
     @Override
     public void remove(Employee e) {

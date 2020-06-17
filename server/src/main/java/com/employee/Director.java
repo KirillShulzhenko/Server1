@@ -1,5 +1,6 @@
 package com.employee;
 
+import com.lab13.Visitor;
 import com.patterns.UserList;
 import com.patterns.workCollection;
 import com.work.Work;
@@ -13,6 +14,12 @@ public class Director implements Employee {
     {
         e.delegate = this;
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visit(this);
+    }
+
     @Override
     public void remove(Employee e) {
         l.remove(e);
