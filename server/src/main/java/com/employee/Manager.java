@@ -20,6 +20,10 @@ public class Manager implements Employee {
     public void accept(Visitor v) {
         v.visit(this);
     }
+
+    public Manager() {
+    }
+
     @Override
     public void add(Employee e) {
         if(delegate!=null)

@@ -1,7 +1,7 @@
 package com.employee;
 
 public class EmployeeFactory {
-    static Employee createEmployeeByRank(String name)
+    public static Employee createEmployeeByRank(String name)
     {
         switch (name)
         {

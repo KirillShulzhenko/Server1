@@ -36,12 +36,17 @@ public class UserList implements com.employee.Employee {
     }
     @Override
     public void remove(Employee e) {
+        list.remove(e);
+
+    }
+    public Employee remove1(Employee e) {
+        return list.peekFirst();
 
     }
 
     @Override
     public void add(Employee e) {
-
+        list.add(e);
     }
 
     @Override
